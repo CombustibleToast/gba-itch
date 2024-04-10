@@ -132,7 +132,7 @@
 
 // Change title
 
-//ENA - location returns the /#abcdef in the URL. So they were using it to determine the name of the game binary.
+//ENA - `location` returns the /#abcdef in the URL. So they were using it to determine the name of the game binary.
 
 // var defaultTitle = document.title;
 // var hashTags = location.hash.substr(1); //substr removes the leading #
@@ -276,7 +276,7 @@ function registerIodineHandler() {
         which browsers prior to 2016 do not support:
         */
         if (typeof SharedArrayBuffer != "function" || typeof Atomics != "object") { // ENA - !! use SharedArrayBuffer!
-            console.log(`No sharedarraybuffer (${typeof SharedArrayBuffer != "function"}) or no atomics api (${typeof Atomics != "object"})`)
+            console.log(`sharedarraybuffer is ${typeof SharedArrayBuffer == "function"}, atomics api is ${typeof Atomics == "object"}`)
             throw null;
         } else if (!IodineGUI.defaults.toggleOffthreadCPU && IodineGUI.defaults.toggleOffthreadGraphics) {
             //Try starting Iodine normally, but initialize offthread gfx:
