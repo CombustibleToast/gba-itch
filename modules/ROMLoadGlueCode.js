@@ -12,6 +12,7 @@ function attachBIOS(BIOS) {
     try {
         IodineGUI.Iodine.attachBIOS(new Uint8Array(BIOS));
     } catch (error) {
+        console.log(`error attching bios to iodine ${error}`)
         IodineGUI.Iodine.attachBIOS(BIOS);
     }
 }
@@ -20,6 +21,7 @@ function attachROM(ROM) {
     try {
         IodineGUI.Iodine.attachROM(new Uint8Array(ROM));
     } catch (error) {
+        console.log(`error attching rom to iodine ${error}`)
         IodineGUI.Iodine.attachROM(ROM);
     }
 }
